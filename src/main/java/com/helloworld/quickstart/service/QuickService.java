@@ -25,13 +25,12 @@ public class QuickService {
         // TODO: DB insert
 
 //        HashMap<String, Object> paramMap = new HashMap<>();
-//
 //        paramMap.put("id", itemDto.getId());
 //        paramMap.put("name", itemDto.getName());
 //
 //        quickMapper.registerItem(paramMap);
 //
-//        log.info("service ...");
+        log.info("service ...");
 
         ItemEntity itemEntity = new ItemEntity();
         itemEntity.setId(itemDto.getId());
@@ -39,6 +38,7 @@ public class QuickService {
 
         itemRepository.save(itemEntity);
 
+        /* 정상으로 들어간 경우 true */
         return true;
     }
 

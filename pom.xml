@@ -21,8 +21,15 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>
 		</dependency>
+		<!-- xxx-web 의존성을 추가해주어야 spring boot 의존성을 불러올 수 있음 -->
+		<!-- 이것만 넣어줘도 톰캣이 자동으로 실행되어 서버에서 확인가능하다. >>> 기본에러페이지 호출 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/org.springdoc/springdoc-openapi-starter-webmvc-ui -->
+		<!-- swagger 의존성 추가 -->
 		<dependency>
 			<groupId>org.springdoc</groupId>
 			<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
@@ -30,6 +37,7 @@
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+		<!-- spring을 잘 쓰기 위해 추가 (컨트롤러, 서비스 등) >>> 롬복 플러그인 및 pom.xml 의존성 추가가 둘 다 되어야 함 -->
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
@@ -37,12 +45,14 @@
 			<scope>provided</scope>
 		</dependency>
 
+		<!-- h2 database 추가 -->
 		<dependency>
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/org.mybatis.spring.boot/mybatis-spring-boot-starter -->
+		<!-- 마이바티스 -->
 		<dependency>
 			<groupId>org.mybatis.spring.boot</groupId>
 			<artifactId>mybatis-spring-boot-starter</artifactId>
